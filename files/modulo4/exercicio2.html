@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulo 4 - Exercício 2</title>
+    </head>
+    <body>
+        <input type="text" name="user" placeholder="Usuário do Github">
+        <button onclick="adicionar()">Adicionar</button>
+        <p></p>
+        <div></div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            const user = document.querySelector('input');
+            const info = document.querySelector('p');
+            const div = document.querySelector('div');
+            
+            function adicionar() {
+                const usuario = user.value;
+                if(usuario){
+                    info.textContent = '';
+                    removeChildIfExists(div);
+                    axios.get(`https://api.github.com/users/${usuario}/repos`)
+                    .then(response => {
+                        console.log(response);
+                        criarList(response);
+                    })
+                    .catch(error => {
+                        console.warn(error);
+                        removeChildIfExists(div);
+                        info.textContent = 'Usuário não encontrado!';
+                    });
+                } else {
+                    removeChildIfExists(div);
+                    info.textContent = 'Digite um usuário do Github';
+                }                
+            }
+
+            function criarList({data}) {
+                const div = document.querySelector('div');
+                const lista = document.createElement('ul');                
+                data.forEach(el => {
+                    let linha = document.createElement("li");
+                    let node = document.createTextNode(el.name);
+                    linha.appendChild(node);
+                    lista.appendChild(linha);
+                });
+
+                div.appendChild(lista);
+            }
+
+            function removeChildIfExists(element) {
+                if (element.hasChildNodes()) {
+                    element.removeChild(element.childNodes[0]);
+                }
+            }
+        </script>
+    </body>
+</html>

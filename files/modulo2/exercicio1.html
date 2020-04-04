@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulo 2 - Exercício 1</title>
+    </head>
+    <body>
+        <div id="base">
+            <button class="botao">Novo elemento</button>
+        </div>
+        <script>
+            let botao = document.querySelector("button.botao");
+            botao.onclick = () => {
+                let quadrado = document.createElement("div");
+                quadrado.style.cssText = 'width:100px;height:100px;background-color:red';
+                let base = document.getElementById("base");
+                base.appendChild(quadrado);
+            }  
+        </script>
+    </body>
+</html>

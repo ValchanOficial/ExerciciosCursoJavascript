@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulo 4 - Exercício 1</title>
+    </head>
+    <body>
+    <input type="text" placeholder="Digite a idade">
+    <p id="response"></p>
+    <button>Verificar</button>
+    <script>
+        const button = document.querySelector('button');
+        const input = document.querySelector('input');
+        const resposta = document.getElementById('response');
+        button.onclick = () => {
+            const idade = input.value;
+            if(idade){
+                resposta.textContent = 'Carregando..';
+                checaIdade(idade)
+                    .then((response) => {
+                        resposta.textContent = response;
+                        console.log(response);
+                    })
+                    .catch((error) => {
+                        resposta.textContent = error;
+                        console.warn(error);
+                    });
+            } else{
+                alert('Informe uma idade!');
+            }            
+        };
+
+        function checaIdade(idade) { 
+            return new Promise((resolve, reject) => {
+            if(idade >= 18) {
+                setTimeout(resolve, 2000, 'Maior que 18');
+            }else {
+                setTimeout(reject, 2000, 'Menor que 18');
+            }
+           });
+        }        
+    </script>
+    </body>
+</html>

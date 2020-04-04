@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Módulo 2 - Exercício 3</title>
+    </head>
+    <body>
+        <div>
+            <ul id="lista"></ul>
+        </div>
+        <script>
+        const nomes = ["Diego", "Gabriel", "Lucas"];
+        nomes.forEach(nome => {
+            let linha = document.createElement("li");
+            let node = document.createTextNode(nome);
+            linha.appendChild(node);
+            let lista = document.getElementById("lista");
+            lista.appendChild(linha);
+        });
+        </script>
+    </body>
+</html>

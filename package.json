@@ -1,0 +1,24 @@
+{
+  "name": "exercicioscursojavascript",
+  "version": "1.0.0",
+  "description": "Exercícios Curso Javascript",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValchanOficial/ExerciciosCursoJavascript.git"
+  },
+  "author": "Valéria Padilha de Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValchanOficial/ExerciciosCursoJavascript/issues"
+  },
+  "homepage": "https://github.com/ValchanOficial/ExerciciosCursoJavascript#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
