@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "32d0d416-34f3-456a-bbd4-6555509c632c",
+		"name": "Exercícios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Modulo1",
+			"item": [
+				{
+					"name": "exercicio 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"cidade\": \"São Paulo\", \n\t\"uf\": \"SP\", \n\t\"bairro\": \"Centro\", \n\t\"rua\": \"Rua de Exemplo\", \n\t\"numero\": 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/modulo-um/exercicio-um",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"modulo-um",
+								"exercicio-um"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exercicio 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"n1\": 10,\n\t\"n2\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/modulo-um/exercicio-dois",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"modulo-um",
+								"exercicio-dois"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exercicio 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"skills\": [\"Nodejs\", \"Java\", \"Javascript\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/modulo-um/exercicio-tres",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"modulo-um",
+								"exercicio-tres"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exercicio 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"anosEstudo\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/modulo-um/exercicio-quatro",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"modulo-um",
+								"exercicio-quatro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exercicio 5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"usuarios\": [  \n\t\t{\n\t\t\t\"nome\": \"Diego\",    \n\t\t\t\"habilidades\": [\"Javascript\", \"ReactJS\", \"Redux\"]\n\t\t}, \n\t\t{\n\t\t\t\"nome\": \"Gabriel\",\n\t\t\t\"habilidades\": [\"VueJS\", \"Ruby on Rails\", \"Elixir\"]\n\t\t}\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/modulo-um/exercicio-cinco",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"modulo-um",
+								"exercicio-cinco"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
